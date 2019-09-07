@@ -1,15 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ICTER.Online.Api.Service;
 using Autofac;
-using Framework.Database;
-using System.Configuration;
-using Framework.Database.Testing;
-using ICTER.Online.Api.Contract;
-using ICTER.Online.Api.ParseurCb2dSncfService.Domain;
-using ICTER.Online.Entity;
 using System;
 using System.Reflection;
-using System.Collections;
 
 namespace ICTER.Online.Tests
 {

@@ -2,7 +2,6 @@
 using Framework.Database;
 using Framework.Database.SQL;
 using Framework.Database.Testing;
-using ICTER.Online.Api.Service;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
