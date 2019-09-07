@@ -1,0 +1,31 @@
+
+--Test 1 
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (1,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTGARE')
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (2,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTPGEN')
+
+--Test 2
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (3,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTGARE')
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (4,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTPGEN')
+
+
+--Test 3
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (5,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTGARE')
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (6,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTPGEN')
+
+
+--Test 4
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (7,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTGARE')
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (8,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTPGEN')
+
+
+--Test 5 
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (9,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTGARE')
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (10,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTPGEN')
+
+
+--Test 6
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (11,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTGARE')
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (12,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTPGEN')
+
+-- Test 7
+INSERT INTO [dbo].[PAR_JEU_PARAMETRE] ([JEU_ID], [NOM], [DESCRIPTION], [ETAT], [VERSION], [RESTRICTION], [DATE_CREATION], [EDIT_USER],  [EDIT_START], [PARAM_TYPE]) VALUES (13,'TestNom','TestDescription','TestEtat','Test','Restiction',GETDATE(),'EditUserTest', GETDATE(), 'ICTPGEN')

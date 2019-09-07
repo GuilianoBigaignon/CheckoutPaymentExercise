@@ -1,0 +1,150 @@
+/* Override general jqx style for FMK */
+.jqx-widget-content {
+    font-family: Lato, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Override jqxNavigationBar style for FMK */
+.fmk-accordion .jqx-expander-header{
+    border: none;
+    padding: 0;
+}
+.fmk-accordion .jqx-expander-header.fmk-highlight{
+    background-color: #FF5A00;
+}
+.fmk-accordion .jqx-expander-header-content{
+}
+.fmk-accordion .jqx-expander-content{
+    padding: 20px;
+    border: none;
+    background-color: transparent;
+}
+.fmk-accordion .jqx-expander-arrow{
+    background-image: none;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    text-align: left;
+}
+.fmk-accordion .jqx-expander-arrow-top:before{
+    /*content: "\2b";*/
+}
+.fmk-accordion .jqx-expander-arrow-bottom:before{
+    /* content: "\2212"
+ */}
+
+/* Override jqxGrid style for FMK */
+ .jqx-widget-content {
+    font-size: 16px;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    display: inherit;
+ }
+.fmk-searchableList-grid {
+    border: none;
+    -moz-border-radius: 0;      
+    -webkit-border-radius: 0;      
+    border-radius: 0;
+    font-size: 16px;      
+    font-size: 1.6rem;
+    overflow: hidden;
+}
+
+.fmk-searchableList-grid .jqx-widget-header {
+    background-color: #65666b;
+    color: #fff;
+    font-family: Lato,sans-serif;
+    font-weight: 700;
+}
+
+.fmk-searchableList-grid .jqx-grid-column-header {
+    border-color: #65666b;
+    box-sizing: border-box;
+}
+.fmk-searchableList-grid .jqx-grid-column-header:first-child > div {
+    padding-left: 20px;
+    box-sizing: inherit;
+}
+
+
+.fmk-searchableList-grid .jqx-grid-cell {
+    border-color: transparent;
+    border-bottom: 1px solid #ababad;
+}
+.fmk-searchableList-grid .jqx-grid-cell:first-child {
+    padding-bottom: 0px;
+    text-indent: 20px;
+}
+.fmk-searchableList-grid .jqx-grid-cell:last-child {
+    padding-right: 2px;
+}
+
+.fmk-searchableList-grid .jqx-grid-cell-hover {
+    background-color: #9292e3;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* // not done anymore because of #26322 : agence interactive did not provide the btn--icon-arrow-pointing-small-up-white css rule, we reset to jqx theme (less classy but working)
+   // see also fmk_searchableList.js
+.fmk-searchableList-grid .jqx-grid-column-sortascbutton.jqx-icon-arrow-up {
+    background-image: none;
+    right: 0px;
+    position: absolute;
+}
+
+.fmk-searchableList-grid .jqx-grid-column-sortdescbutton.jqx-icon-arrow-down {
+    background-image: none;
+    right: 0px;
+    position: absolute;
+}
+
+.fmk-searchableList-grid .jqx-grid-column-sortascbutton.jqx-icon-arrow-up:before,
+.fmk-searchableList-grid .jqx-grid-column-sortdescbutton.jqx-icon-arrow-down:before {
+    content: '';
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.fmk-searchableList-grid .jqx-widget-header.sortasc,
+.fmk-searchableList-grid .jqx-widget-header.sortdesc {
+    padding-top: 21px;
+    width: 30px !important;
+}*/
+
+/* Inputs */
+
+.fmk-actionBar input[type=text].jqx-input.jqx-widget-content {            
+
+}
+.fmk-actionBar input[type=text].jqx-input.jqx-input  {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 0 15px;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-style: italic
+}
+.fmk-actionBar input[type=text].jqx-input.jqx-rc-all {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+.fmk-user-control-change-password {
+    top: 50%;
+    transform: translate(30%, -50%);
+}
+
+.fmk-field-dropdown .jqx-icon-arrow-down-fmk {
+    display: none;
+}
+
+.fmk-accordion .jqx-expander-header-content{
+    width: 100%;
+}

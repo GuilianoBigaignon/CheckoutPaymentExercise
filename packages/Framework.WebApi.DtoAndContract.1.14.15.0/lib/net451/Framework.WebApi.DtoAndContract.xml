@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Framework.WebApi.DtoAndContract</name>
+    </assembly>
+    <members>
+        <member name="T:Framework.WebApi.DtoAndContract.ApiResource`1">
+            <summary>
+            Data sent by server to the client with the resources url for available actions
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.ApiResource`1.ResourceType">
+            <summary>
+            Gets or sets the Resource type (ex : "mapSettings", "view", ...) : which data the resource represents
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.ApiResource`1.Links">
+            <summary>
+            Gets or sets the list of possible to follow resources.
+            Can be null or empty or filled.
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.ApiResource`1.Rels">
+            <summary>
+            Gets or sets the list of possible to follow resources.
+            Can be null or empty or filled.
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.ApiResource`1.Data">
+            <summary>
+            Gets or sets the custom properties agreed upon between the server and client, for this resource type
+            </summary>
+        </member>
+        <member name="M:Framework.WebApi.DtoAndContract.Attributes.ColumnDescAttribute.#ctor(System.Boolean,System.String,System.String,Framework.WebApi.DtoAndContract.Attributes.ColumnDescType,System.Boolean)">
+            <summary>
+            Options for the SearchableList columns to enable more control on rendering.
+            </summary>
+            <param name="sortable">false by default, if true, then sorting on the column will be possible</param>
+            <param name="defaultWidth">Default width for the column. If not set, a value will be set by default depending on type and property type.</param>
+            <param name="renderer">javascript function to be used for rendering.</param>
+            <param name="type">Type of rendering. Auto by default. Auto will render depending on property type. 
+            Currency will format column depending on  </param>
+            <param name="hidden">false by default. Set true if you wish to hidde this column.</param>
+        </member>
+        <member name="F:Framework.WebApi.DtoAndContract.Attributes.ColumnDescType.Auto">
+            <summary>
+            If this is the specified ColumnDescType, then the column type will be taken depending on the property type
+            For boolean property it will behave as Checkbox
+            For Datetime property, it will behave as Datetime,
+            
+            </summary>
+        </member>
+        <member name="F:Framework.WebApi.DtoAndContract.Attributes.ColumnDescType.Currency">
+            <summary>
+            Format column following the currency format.
+            </summary>
+        </member>
+        <member name="F:Framework.WebApi.DtoAndContract.Attributes.ColumnDescType.Date">
+            <summary>
+            Format column with the Fmk_longDate_format
+            </summary>
+        </member>
+        <member name="F:Framework.WebApi.DtoAndContract.Attributes.ColumnDescType.Datetime">
+            <summary>
+            Format column with the Fmk_dateTime_format
+            </summary>
+        </member>
+        <member name="F:Framework.WebApi.DtoAndContract.Attributes.ColumnDescType.Checkbox">
+            <summary>
+            Display a checkbox in the column
+            </summary>
+        </member>
+        <member name="F:Framework.WebApi.DtoAndContract.Attributes.ColumnDescType.Enum">
+            <summary>
+            Displayed label depends on a enum value
+            </summary>
+        </member>
+        <member name="T:Framework.WebApi.DtoAndContract.Attributes.SortableAttribute">
+            <summary>
+            Sort attribute.
+            </summary>
+        </member>
+        <member name="T:Framework.WebApi.DtoAndContract.Attributes.ValidateObjectAttribute">
+            <summary>
+            Use this attribute to validate properties of inner objects (example : InnerForm).
+            Note that it also works with IEnumerable (i.e it also works with InnerForm(repeatable:true))
+            </summary>
+        </member>
+        <member name="T:Framework.WebApi.DtoAndContract.Contracts.EntityContractPropertyJsonConverter">
+            <summary>
+            JsonConverter that can read inheritance of Property thanks to the Format property
+            </summary>
+        </member>
+        <member name="T:Framework.WebApi.DtoAndContract.Contracts.FieldJsonConverter">
+            <summary>
+            JsonConverter that can read inheritance of Field thanks to the Type property
+            </summary>
+        </member>
+        <member name="T:Framework.WebApi.DtoAndContract.Page`1">
+            <summary>
+            Represents a paginated list of results
+            </summary>
+            <typeparam name="T">the type of paginated items</typeparam>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.Page`1.Count">
+            <summary>
+            Total number of items that matched the request
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.Page`1.Skip">
+            <summary>
+            Index of the first item in the list.
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.Page`1.Limit">
+            <summary>
+            Number of provided items
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.Page`1.List">
+            <summary>
+            The provided items
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.Page`1.SortField">
+            <summary>
+            The field that was used to sort the list
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.Page`1.SortDir">
+            <summary>
+            The direction that was used to sort the list
+            </summary>
+        </member>
+        <member name="T:Framework.WebApi.DtoAndContract.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Framework.WebApi.DtoAndContract.ResourceLink">
+            <summary>
+            Resource that describes an available action to the client
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.ResourceLink.Href">
+            <summary>
+            Gets or sets the full url for the resource
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.ResourceLink.ResourceType">
+            <summary>
+            Gets or sets the Resource type : what data the resource represents (i.e which contract is necessary to understand it)
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.ResourceLink.Method">
+            <summary>
+            Gets or sets the REST method available to call the resource (GET, POST, PUT or DELETE) 
+            </summary>
+        </member>
+        <member name="P:Framework.WebApi.DtoAndContract.ResourceLink.Label">
+            <summary>
+            The label to display the link. 
+            For example, Method=PUT + ResourceType=Product 
+            => Label(fr-FR) = Modifier le produit
+            => Label(en-US) = Update the product
+            </summary>
+        </member>
+        <member name="M:Framework.WebApi.DtoAndContract.ResourceLinkExtensions.ResourceLink(System.Web.Http.Routing.UrlHelper,System.String,System.String,System.Object,System.String,System.String)">
+            <summary>
+            Generates a resourceLink from a route with path substitution via UrlHelper.Route 
+            /!\ this method is not safe when you want to use a query (see the ResourceLinkExtensions.ResourceLink method in Framework.WebApi.Core)
+            </summary>
+            <remarks>
+            This method should be located in Framework.WebApi.Core but as we have to guarantee backward compatiblity, we can not move it now...
+            </remarks>
+            <param name="urlHelper">the urlHelper to extend</param>
+            <param name="method">Used to fill ResourceLink.Method</param>
+            <param name="resourceType">Used to fill ResourceLink.ResourceType</param>
+            <param name="routeValues">Used as argument to UrlHelper.Route</param>
+            <param name="routeName">Used as argument to UrlHelper.Route</param>
+            <param name="label">Used to fill ResourceLink.Label</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

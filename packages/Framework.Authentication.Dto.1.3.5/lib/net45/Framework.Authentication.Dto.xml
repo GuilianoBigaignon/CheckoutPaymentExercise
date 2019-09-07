@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Framework.Authentication.Dto</name>
+    </assembly>
+    <members>
+        <member name="T:Framework.Authentication.Dto.Application">
+            <summary>
+            Entity to describe an application available to a user
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Application.Id">
+            <summary>
+            Id of the application
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Application.Name">
+            <summary>
+            Name of the application, defaulting to Id if unspecified
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Application.Url">
+            <summary>
+            Url to reach the application (/!\ does not contain the host)
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Application.SupportedCultures">
+            <summary>
+            Cultures supported by the application
+            </summary>
+        </member>
+        <member name="T:Framework.Authentication.Dto.ChangePasswordStatus">
+            <summary>
+            Response for changing password API
+            </summary>
+        </member>
+        <member name="F:Framework.Authentication.Dto.Constants.AuthTokenCookieName">
+            <summary>
+            Name of the HTTP cookie expected by AUTH.API to identify a user
+            </summary>
+        </member>
+        <member name="F:Framework.Authentication.Dto.Constants.AuthWebUserTokenName">
+            <summary>
+            name of the HTTP cookier expected by AUTH.API to identify a webuser and anonymous user
+            </summary>
+        </member>
+        <member name="M:Framework.Authentication.Dto.Constants.AuthTokenCookie(System.String)">
+            <summary>
+            Factory to create a cookie understandable by AUTH.API
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Framework.Authentication.Dto.Constants.CurrentAppHeaderName">
+            <summary>
+            Name of the HTTP cookie expected by AUTH.API/preferences to name an application
+            </summary>
+        </member>
+        <member name="F:Framework.Authentication.Dto.Constants.ApiKeyTokenPrefix">
+            <summary>
+            Prefix of the AuthToken for an ApiKey
+            </summary>
+        </member>
+        <member name="F:Framework.Authentication.Dto.Constants.CrossApiKey">
+            <summary>
+            ApiKey used for cross API FMK calls
+            </summary>
+        </member>
+        <member name="T:Framework.Authentication.Dto.Identity">
+            <summary>
+            Holds information about a User and implements ASP.NET IIdentity for seamless integration into WEB API
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.Login">
+            <summary>
+            Login of the user
+            </summary>
+            <remarks>
+            Login is always retrieved in lower case, so that unsensitive case in oracle user account doesn't 
+            affect queries (which are case sensitive). See #9214.
+            </remarks>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.Password">
+            <summary>
+            Password of the user. 
+            </summary>
+            <remarks>
+            Will be deprecated soon (i.e when all applications use the central authentication)
+            </remarks>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.ValidUntil">
+            <summary>
+            Expiration Date. 
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.Token">
+            <summary>
+            The token of the user session
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.Roles">
+            <summary>
+            Claims of the user, whatever the network or operator they are assigned to
+            </summary>
+            <remarks>
+            Soon, there will be an additional field to retrieve claims by network and/or operator.
+            </remarks>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.PreferredCulture">
+            <summary>
+            The generally preferred culture to display messages to the user
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.PreferredCultureByApp">
+            <summary>
+            The culture to use application by application, otherwise use PreferredCulture
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.Name">
+            <summary>
+            Same as login, used to be compatible with System.Security.Principal.IIdentity
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.AuthenticationType">
+            <summary>
+            Always empty, used to be compatible with System.Security.Principal.IIdentity
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.IsAuthenticated">
+            <summary>
+            Always true, used to be compatible with System.Security.Principal.IIdentity
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.Networks">
+            <summary>
+            List of Networks associated to user profile
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.Operators">
+            <summary>
+            List of Operators associated to user profile
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.Companies">
+            <summary>
+            List of Companies associated to user profile
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.LocalizedSoftwareFunctions">
+            <summary>
+            List of Software Functions in Functions Groups associated to user profile
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.Identity.ClientIdentity">
+            <summary>
+            Used for store client identity types
+            </summary>
+        </member>
+        <member name="T:Framework.Authentication.Dto.WebIdentity">
+            <summary>
+             Hold user informations for Web users and Anonymous users
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.WebIdentity.Login">
+            <summary>
+                Web user identifier, Login or IP
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.WebIdentity.AuthenticationType">
+            <summary>
+                Web user type, ANONYMOUS or WEBUSER
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.WebIdentity.Token">
+            <summary>
+                The token of the web user session
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.WebIdentity.ValidUntil">
+            <summary>
+                Expiration Date.
+            </summary>
+        </member>
+        <member name="T:Framework.Authentication.Dto.CultureForApp">
+            <summary>
+            InnerDto to be implemented by an auth provider.
+            </summary>
+            <remarks>
+            This class is not used in the API.
+            It is located inside the Dto nuget so that you can implement an authentication DLL
+            </remarks>
+        </member>
+        <member name="P:Framework.Authentication.Dto.CultureForApp.App">
+            <summary>
+            The application
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.CultureForApp.Culture">
+            <summary>
+            The culture
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.CultureForApp.ReplaceGobally">
+            <summary>
+            Should this preference replace all CultureByApp entries
+            </summary>
+        </member>
+        <member name="T:Framework.Authentication.Dto.PreferenceForm">
+            <summary>
+            Form to save a preference
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.PreferenceForm.Value">
+            <summary>
+            Value of the preference
+            </summary>
+        </member>
+        <member name="T:Framework.Authentication.Dto.RevokeTokenForm">
+            <summary>
+                Form used for revoke a token and deactivate the user
+            </summary>
+        </member>
+        <member name="T:Framework.Authentication.Dto.UserCredential">
+            <summary>
+            Form to authenticate a user
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.UserCredential.Login">
+            <summary>
+            Login of the user
+            </summary>
+            <remarks>
+            Login is always retrieved in lower case, so that unsensitive case in oracle user account doesn't 
+            affect queries (which are case sensitive). See #9214.
+            </remarks>
+        </member>
+        <member name="P:Framework.Authentication.Dto.UserCredential.Password">
+            <summary>
+            Password of the user. 
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.UserCredential.PreferredCulture">
+            <summary>
+            Culture chosen by the user, defaulting to en-US when not specified
+            </summary>
+        </member>
+        <member name="T:Framework.Authentication.Dto.UserEntry">
+            <summary>
+            Entity to describe a user
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.UserEntry.Id">
+            <summary>
+            The id of the user, usually the login
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.UserEntry.Token">
+            <summary>
+            The token of the user session which is usable to identify the user when calling an API
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.UserEntry.Apps">
+            <summary>
+            The list of applications available to the user
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.UserEntry.PreferredCulture">
+            <summary>
+            The generally preferred culture to display messages to the user
+            </summary>
+        </member>
+        <member name="P:Framework.Authentication.Dto.UserEntry.PreferredCultureByApp">
+            <summary>
+            The culture to use application by application, otherwise use PreferredCulture
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,48 @@
+header {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #28292E;
+    line-height: 40px;
+    font-size: 20px;
+    color: white;
+}
+
+ul.fmk-demo-content {
+    margin-top: 20px;
+    padding: 0;
+}
+
+li.fmk-demo-widget-tile {
+    list-style: none;
+    display: inline-block;
+    padding: 15px;
+}
+
+li.fmk-demo-widget-tile > div {
+    background-color: #DBECFF;
+    padding: 15px;
+    height: 150px;
+    cursor: pointer;
+}
+
+li.fmk-demo-widget-tile > div:hover {
+    background-color: #ECF3FC;
+}
+
+li.fmk-demo-widget-tile h2 {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+li.fmk-demo-widget-tile p.fmk-demo-widget-description {
+    font-size: 15px;
+    height: 62px;  
+    overflow: auto;
+}
+
+li.fmk-demo-widget-tile p.fmk-demo-widget-tags {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;    white-space: nowrap;
+}

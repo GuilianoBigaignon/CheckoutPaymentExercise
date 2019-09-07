@@ -1,0 +1,1 @@
+INSERT INTO [dbo].[PAR_TITRE] ([TITRE_ID], [JEU_ID], [CODE_TITRE]) VALUES (1,1,'Test_Exist')

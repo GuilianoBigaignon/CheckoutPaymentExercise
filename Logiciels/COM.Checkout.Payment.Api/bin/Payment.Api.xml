@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Payment.Api</name>
+    </assembly>
+    <members>
+        <member name="T:COM.Checkout.Payment.Api.AutofacConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.AutofacConfig.ConfigureContainer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.AutofacConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.AutofacConfig.RegisterTest(System.Web.Http.HttpConfiguration,Framework.Database.IDbContext)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+            <param name="testContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:COM.Checkout.Payment.Api.SwaggerConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.SwaggerConfig.Register">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.SwaggerConfig.ResolveVersionSupportByRouteConstraint(System.Web.Http.Description.ApiDescription,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="apiDesc"></param>
+            <param name="targetApiVersion"></param>
+            <returns></returns>
+        </member>
+        <member name="T:COM.Checkout.Payment.Api.WebApiConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.WebApiConfig.RegisterGlobal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:COM.Checkout.Payment.Api.BaseController">
+            <summary>
+            Base Controller 
+            </summary>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.BaseController.#ctor(COM.Checkout.Payment.Api.Service.ICommonServices)">
+            <summary>
+            BaseController constructor (IoC)
+            </summary>
+            <param name="commonServices"></param>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.BaseController.Check">
+            <summary>
+            Get Global WebServices Status
+            </summary>
+            <remarks>
+            This method is called to retrieve the global web services availability.
+            </remarks>
+            <response code="200">Ok</response>
+            <response code="503">Service unavailable</response>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.BaseController.Version">
+            <summary>
+            Get Global WebServices Version
+            </summary>
+            <remarks>
+            This method is called to retrieve the global web services version.
+            </remarks>
+            <response code="200">Ok</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.BaseController.Versions">
+            <summary>
+            Get All Components Versions
+            </summary>
+            <remarks>
+            This method is called to retrieve the web services component versions.
+            </remarks>
+            <response code="200">Ok</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.BaseController.IsAlive">
+            <summary>
+            Test WebServices availability
+            </summary>
+            <remarks>
+            This method is called to retrieve the global web services availability.
+            </remarks>
+            <response code="200">Ok</response>
+            <response code="500">Internal Server Error</response>
+        </member>
+        <member name="T:COM.Checkout.Payment.Api.Controllers.PaymentController">
+            <summary>
+            Liste DV Controller
+            </summary>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.Controllers.PaymentController.#ctor(COM.Checkout.Payment.Api.Service.IPaymentServices,COM.Checkout.Payment.Api.Service.ICommonServices)">
+            <summary>
+            Liste DV Constructeur
+            </summary>
+            <param name="paymentServices"></param>
+            <param name="commonServices"></param>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.Controllers.PaymentController.Payment(COM.Checkout.Payment.Api.Contract.DTO.MessageRequest.PaymentRequestDTO)">
+            <summary>
+            Payment
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.Controllers.PaymentController.Confirm(COM.Checkout.Payment.Api.Contract.DTO.MessageRequest.PaymentConfirmationRequestDTO)">
+            <summary>
+            Confirm
+            </summary>
+            <param name="req"></param>
+            <returns></returns>
+        </member>
+        <member name="T:COM.Checkout.Payment.Api.WebApiApplication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.WebApiApplication.Application_Start">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:COM.Checkout.Payment.Api.WebApiApplication.GetCurentNameSpace">
+            <summary>
+            Permet d'obtenir le nom du namespace actuel
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

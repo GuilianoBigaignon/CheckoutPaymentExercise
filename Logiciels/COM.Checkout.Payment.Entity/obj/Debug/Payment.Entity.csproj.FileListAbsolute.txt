@@ -1,0 +1,8 @@
+D:\API\Checkout\Logiciels\COM.Checkout.Payment.Entity\bin\Debug\ICTER.ListeDV.Entity.dll
+D:\API\Checkout\Logiciels\COM.Checkout.Payment.Entity\bin\Debug\ICTER.ListeDV.Entity.pdb
+D:\API\Checkout\Logiciels\COM.Checkout.Payment.Entity\obj\Debug\ICTER.ListeDV.Entity.dll
+D:\API\Checkout\Logiciels\COM.Checkout.Payment.Entity\obj\Debug\ICTER.ListeDV.Entity.pdb
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Entity\bin\Debug\ICTER.ListeDV.Entity.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Entity\bin\Debug\ICTER.ListeDV.Entity.pdb
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Entity\obj\Debug\ICTER.ListeDV.Entity.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Entity\obj\Debug\ICTER.ListeDV.Entity.pdb

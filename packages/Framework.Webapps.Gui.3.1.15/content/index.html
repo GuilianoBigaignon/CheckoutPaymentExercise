@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <title>API Index</title>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/WEBAPPS.GUI/Content/Img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/WEBAPPS.GUI/Content/Img/favicon.ico" type="image/x-icon">
+    <link href="/WEBAPPS.GUI/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/WEBAPPS.GUI/Scripts/FMK/styles/fmk-gui.css" rel="stylesheet" type="text/css" />
+    <script src="/WEBAPPS.GUI/bundles/ext" type="text/javascript" language="javascript"></script>
+    <script src='/WEBAPPS.GUI/debugbundles/fmk' type='text/javascript' language='text/javascript'></script>    
+</head>
+<body class="fmk-wrapper">
+    <div class="fmk-navigationBar">
+        <div class="fmk-app-selector fmk-button bar-inline__item bar-inline__left">
+            <div class="fmk-app-selector-header">
+                <div class="fmk-image fmk-navigationBar-logo mcp-navigationBar-logo">
+                </div>
+            </div>
+        </div>
+        <p style="line-height: 60px" class="title--medium fmk-title--medium">API Index</p>
+    </div>
+    <div class="fmk-content-1-header">
+        <div class="mcp-home-dashboard fmk-content-1-header fmk-auto-scroll l-content__inner fmk-dashboardScreen fmk-screen">
+            <div class="fmk-dashboardScreen-dashboard">
+                <p class="l-dashboard__col__title title title--medium title--light title--upper">WEBAPPS</p>
+                <div class="fmk-dashboard-content">
+                    <div id="fmkApis"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var app = 'FMK';
+        Fmk.I18n.init(app, null, function () {
+            initPage();
+        });
+
+        var fmkApis = [
+            '/AUTH.API',
+            '/CARTO.API',
+            '/CURRENCY.API',
+            '/FILE.API',
+            '/I18N.API'
+        ];
+
+        function displayApi(element, uri) {
+            var html = '<a href="{0}" target="_blank"><div class="fmk-tile l-pull-left">' +
+                '<div class="card card--vertical-center  card--link card--icon">' +
+                '<div class="card__inner card__left">' +
+                '<p class="title title--medium title--extra-bold title--white">{1} ({2})</p>' +
+                '<p class="title title--small title--white" style="margin-top: 10px">{3}</p>' +
+                '</div>' +
+                '</div>' +
+                '</div></a>';
+            $.get(uri + '/swagger/docs/v1').done(function (data) {
+                if (!data) return;
+                var information = data.info;
+                var name = information.title;
+                var description = information.description;
+                $.get(uri + '/version', function (data) {
+                    var version = data.version;
+                    $(element).append(
+                        html
+                        .replace('{0}', uri)
+                        .replace('{1}', name)
+                        .replace('{2}', version)
+                        .replace('{3}', description));
+                });
+            });
+        }
+
+        function initPage() {
+
+            fmkApis.forEach(function (api) {
+                displayApi("#fmkApis", api);
+            });
+        }
+
+    </script>
+</body>
+</html>
+
