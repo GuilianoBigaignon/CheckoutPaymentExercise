@@ -76,10 +76,7 @@ namespace ICTER.Online.Tests
                 //builder.RegisterInstance(testContext).As<IDbContext>();
 
                 #region Enregistrements AutoFac
-
-                //AutoFac pour 
-                Online.Api.AutofacConfig.AutofacRegister(builder);
-
+                
                 _container = builder.Build(); // Creation d'un conteneur par défaut
 
                 #endregion

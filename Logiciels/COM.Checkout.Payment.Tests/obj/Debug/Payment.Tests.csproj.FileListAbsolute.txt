@@ -1,2 +1,0 @@
-D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Tests\obj\Debug\Payment.Tests.csproj.App.config
-D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Tests\obj\Debug\Payment.Tests.csprojResolveAssemblyReference.cache
