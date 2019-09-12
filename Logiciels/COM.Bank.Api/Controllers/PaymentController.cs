@@ -13,7 +13,7 @@ namespace COM.Bank.Api.Controllers
     /// <summary>
     /// Liste DV Controller
     /// </summary>
-    public class PaymentController : BaseController
+    public class BankController : BaseController
     {
         private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
         private readonly IPaymentServices _paymentServices;
@@ -23,7 +23,7 @@ namespace COM.Bank.Api.Controllers
         /// </summary>
         /// <param name="paymentServices"></param>
         /// <param name="commonServices"></param>
-        public PaymentController(IPaymentServices paymentServices, ICommonServices commonServices) : base(commonServices)
+        public BankController(IPaymentServices paymentServices, ICommonServices commonServices) : base(commonServices)
         {
             _paymentServices = paymentServices;
         }
@@ -34,14 +34,14 @@ namespace COM.Bank.Api.Controllers
         /// <param name="req"></param>
         /// <returns></returns>
         [HttpPost]
-        [Route("OnlinePayment/Payment")]
+        [Route("BankPayment/Payment")]
         [ResponseType(typeof(PaymentRequestDTO))]
         public HttpResponseMessage Payment([FromBody] PaymentRequestDTO req)
         {
             HttpResponseMessage response = new HttpResponseMessage();
             try
             {
-                response = _paymentServices.DoPayment(req);
+                //TODO : ADD hardcoded data to simulate bank payment and return a positive response
             }
             catch (Exception ex)
             {
@@ -57,7 +57,7 @@ namespace COM.Bank.Api.Controllers
     /// <param name="req"></param>
     /// <returns></returns>
     [HttpPost]
-    [Route("OnlinePayment/Confirm")]
+    [Route("BankPayment/Confirm")]
     [ResponseType(typeof(PaymentRequestDTO))]
     public IHttpActionResult Confirm([FromBody] PaymentConfirmationRequestDTO req)
     {
@@ -65,7 +65,7 @@ namespace COM.Bank.Api.Controllers
 
             try
             {
-                paymentConfirmation = _paymentServices.GetPayment(req);
+                //TODO : ADD hardcoded data to simulate bank payment request and return a harcoded positive response
             }
             catch (Exception ex)
             {

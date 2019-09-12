@@ -56,7 +56,7 @@ namespace COM.Checkout.Payment.Api.Service.Impl
         {
             PrepareClient();
 
-            HttpResponseMessage response = await client.PostAsJsonAsync("api/products", paymentDTO);
+            HttpResponseMessage response = await client.PostAsJsonAsync("BankPayment/Payment", paymentDTO);
             response.EnsureSuccessStatusCode();            
             return response;
         }

@@ -120,26 +120,26 @@
             <response code="200">Ok</response>
             <response code="500">Internal Server Error</response>
         </member>
-        <member name="T:COM.Bank.Api.Controllers.PaymentController">
+        <member name="T:COM.Bank.Api.Controllers.BankController">
             <summary>
             Liste DV Controller
             </summary>
         </member>
-        <member name="M:COM.Bank.Api.Controllers.PaymentController.#ctor(COM.Checkout.Payment.Api.Service.IPaymentServices,COM.Checkout.Payment.Api.Service.ICommonServices)">
+        <member name="M:COM.Bank.Api.Controllers.BankController.#ctor(COM.Checkout.Payment.Api.Service.IPaymentServices,COM.Checkout.Payment.Api.Service.ICommonServices)">
             <summary>
             Liste DV Constructeur
             </summary>
             <param name="paymentServices"></param>
             <param name="commonServices"></param>
         </member>
-        <member name="M:COM.Bank.Api.Controllers.PaymentController.Payment(COM.Checkout.Payment.Api.Contract.DTO.MessageRequest.PaymentRequestDTO)">
+        <member name="M:COM.Bank.Api.Controllers.BankController.Payment(COM.Checkout.Payment.Api.Contract.DTO.MessageRequest.PaymentRequestDTO)">
             <summary>
             Payment
             </summary>
             <param name="req"></param>
             <returns></returns>
         </member>
-        <member name="M:COM.Bank.Api.Controllers.PaymentController.Confirm(COM.Checkout.Payment.Api.Contract.DTO.MessageRequest.PaymentConfirmationRequestDTO)">
+        <member name="M:COM.Bank.Api.Controllers.BankController.Confirm(COM.Checkout.Payment.Api.Contract.DTO.MessageRequest.PaymentConfirmationRequestDTO)">
             <summary>
             Confirm
             </summary>
