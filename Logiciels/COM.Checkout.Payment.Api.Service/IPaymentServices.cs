@@ -17,6 +17,6 @@ namespace COM.Checkout.Payment.Api.Service
         /// <summary>
         /// Retrieve payment info
         /// </summary>
-        HttpResponseMessage GetPayment(PaymentConfirmationRequestDTO paymentConfirmationDTO);
+        PaymentConfirmationRequestDTO GetPayment(PaymentConfirmationRequestDTO paymentConfirmationDTO);
     }
 }

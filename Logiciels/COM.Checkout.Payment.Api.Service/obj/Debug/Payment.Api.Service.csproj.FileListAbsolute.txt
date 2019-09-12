@@ -31,6 +31,7 @@ D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\IC
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\log4net.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\Newtonsoft.Json.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\Payment.Api.Contract.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Net.Http.Formatting.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Http.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Http.Tracing.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Http.WebHost.dll
@@ -40,6 +41,7 @@ D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\IC
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\log4net.xml
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\Newtonsoft.Json.pdb
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\Newtonsoft.Json.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Net.Http.Formatting.xml
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Http.xml
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Http.Tracing.xml
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Http.WebHost.xml

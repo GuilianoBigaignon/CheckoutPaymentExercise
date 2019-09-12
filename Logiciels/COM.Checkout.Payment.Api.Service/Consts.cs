@@ -2,6 +2,6 @@
 {
     public static partial class Consts
     {
-             public const string Delta = "delta";
+             public const string BankURL = "http://localhost:64195/";
     }
 }

@@ -75,8 +75,8 @@ namespace COM.Checkout.Payment.Api.Service.Filters
 
                     if (paymentRepresentationModel != null)
                     {
-                        isValidate = ((paymentRepresentationModel.Amount == 0) ||
-                        (!paymentRepresentationModel.bearer.Any()) || (paymentRepresentationModel.CardNumber.Any()) || (paymentRepresentationModel.CvvCode == 0) /*Add more validation*/) ? false : true;
+                        isValidate = ((paymentRepresentationModel.Amount != 0) && (paymentRepresentationModel.bearer.Any()) && (paymentRepresentationModel.CardNumber.Any()) && (paymentRepresentationModel.CvvCode != 0) /*Add more validation*/);
+
                         if (isValidate)
                         {
                             try
@@ -97,8 +97,8 @@ namespace COM.Checkout.Payment.Api.Service.Filters
 
                     if (paymentConfRepresentationModel != null)
                     {
-                        isValidate = ((paymentRepresentationModel.Amount == 0) ||
-                        (!paymentConfRepresentationModel.bearer.Any()) || (paymentConfRepresentationModel.CardNumber.Any()) || (paymentConfRepresentationModel.CvvCode == 0) /*Add more validation*/) ? false : true;
+                        isValidate = ((paymentRepresentationModel.Amount != 0) && (paymentConfRepresentationModel.bearer.Any()) && (paymentConfRepresentationModel.CardNumber.Any()) && (paymentConfRepresentationModel.CvvCode != 0) /*Add more validation*/);
+
                         if (isValidate)
                         {
                             try
@@ -117,9 +117,12 @@ namespace COM.Checkout.Payment.Api.Service.Filters
                         }
                     }
 
-                    if (cardRepresentationModel != null)
+                    if (cardRepresentationModel != null && paymentRepresentationModel == null)
+                    // PaymentRepresentation comprend CardRepresentation + Amount + Currency 
+                    //==> On considere un CardRepresentationEntity uniquement si la requete n'a pas ete identifiee comme PaymentRepresentation
                     {
-                        isValidate = ((!paymentRepresentationModel.bearer.Any()) || (paymentRepresentationModel.CardNumber.Any()) || (paymentRepresentationModel.CvvCode == 0) /*Add more validation*/) ? false : true;
+                        isValidate = ((paymentRepresentationModel.bearer.Any()) && (paymentRepresentationModel.CardNumber.Any()) || (paymentRepresentationModel.CvvCode != 0) /*Add more validation*/);
+
                         if (isValidate)
                         {
                             try

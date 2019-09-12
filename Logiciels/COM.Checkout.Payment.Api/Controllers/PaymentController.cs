@@ -59,20 +59,19 @@ namespace COM.Checkout.Payment.Api.Controllers
     [HttpPost]
     [Route("OnlinePayment/Confirm")]
     [ResponseType(typeof(PaymentRequestDTO))]
-    public HttpResponseMessage Confirm([FromBody] PaymentConfirmationRequestDTO req)
+    public IHttpActionResult Confirm([FromBody] PaymentConfirmationRequestDTO req)
     {
-        HttpResponseMessage response = new HttpResponseMessage();
-        try
-        {
-            response = _paymentServices.GetPayment(req);
-        }
-        catch (Exception ex)
-        {
-            response.StatusCode = HttpStatusCode.InternalServerError;
-            response.Content = new StringContent(ex.Message);
-        }
-        return response;
+            PaymentConfirmationRequestDTO paymentConfirmation = new PaymentConfirmationRequestDTO();
 
+            try
+            {
+                paymentConfirmation = _paymentServices.GetPayment(req);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return Ok(paymentConfirmation);
         }
     }
 }
