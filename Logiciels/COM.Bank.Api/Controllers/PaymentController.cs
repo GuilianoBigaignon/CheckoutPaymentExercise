@@ -41,7 +41,8 @@ namespace COM.Bank.Api.Controllers
             HttpResponseMessage response = new HttpResponseMessage();
             try
             {
-                //TODO : ADD hardcoded data to simulate bank payment and return a positive response
+                req.CardNumber = "***" + req.CardNumber.Substring(req.CardNumber.Length-3); //Mask the creditcard numder and resend objet as IS since it is a mock
+                response = Request.CreateResponse(HttpStatusCode.OK, req);
             }
             catch (Exception ex)
             {
@@ -65,7 +66,20 @@ namespace COM.Bank.Api.Controllers
 
             try
             {
-                //TODO : ADD hardcoded data to simulate bank payment request and return a harcoded positive response
+                req.CardNumber = "***" + req.CardNumber.Substring(req.CardNumber.Length - 3); //Mask the creditcard numder and resend objet as IS since it is a mock                
+                paymentConfirmation = req;
+
+                //paymentConfirmation = new PaymentConfirmationRequestDTO()
+                //{
+                //    Amount = req.Amount,
+                //    AuthenticationToken = req.AuthenticationToken,
+                //     bearer = req.bearer
+
+
+                //};
+
+
+
             }
             catch (Exception ex)
             {

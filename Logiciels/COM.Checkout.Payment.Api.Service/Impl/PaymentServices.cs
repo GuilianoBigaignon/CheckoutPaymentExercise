@@ -66,7 +66,7 @@ namespace COM.Checkout.Payment.Api.Service.Impl
             PaymentConfirmationRequestDTO paymentConf = null;
 
             PrepareClient();
-            HttpResponseMessage response = await client.GetAsync(TransactionConfirmationCode);
+            HttpResponseMessage response = await client.GetAsync($"BankPayment/Payment/{TransactionConfirmationCode}");
 
             if (response.IsSuccessStatusCode)
             {

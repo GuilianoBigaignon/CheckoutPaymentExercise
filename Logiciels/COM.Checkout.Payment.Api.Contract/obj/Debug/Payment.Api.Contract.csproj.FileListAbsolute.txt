@@ -2,5 +2,6 @@ D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Contract\bin\Debug\P
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Contract\bin\Debug\Payment.Api.Contract.pdb
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Contract\bin\Debug\Newtonsoft.Json.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Contract\bin\Debug\Newtonsoft.Json.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Contract\obj\Debug\Payment.Api.Contract.csprojResolveAssemblyReference.cache
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Contract\obj\Debug\Payment.Api.Contract.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Contract\obj\Debug\Payment.Api.Contract.pdb
