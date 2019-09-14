@@ -4,9 +4,15 @@ using System.Net.Http;
 using COM.Checkout.Payment.Api.Contract.DTO.MessageRequest;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
+using COM.Checkout.Payment.Api.Service.Common.Net.Http;
+using System.ComponentModel.Composition;
 
 namespace COM.Checkout.Payment.Api.Service.Impl
 {
+    [Export(typeof(IPaymentServices))]
+    //[Export(typeof(ITicketingCalculator))]
+    [ExportMetadata("Name", "Smirt")]
+    [System.ComponentModel.Composition.PartCreationPolicy(System.ComponentModel.Composition.CreationPolicy.NonShared)]
     public class PaymentServices : IPaymentServices
     {   
         public PaymentServices()
@@ -17,18 +23,19 @@ namespace COM.Checkout.Payment.Api.Service.Impl
         /// <summary>
         /// Initiate an online payment
         /// </summary>
-        public HttpResponseMessage DoPayment(PaymentRequestDTO paymentDTO)
+        public PaymentRequestDTO DoPayment(PaymentRequestDTO paymentDTO)
         {
             HttpResponseMessage httpResponseMessage = new HttpResponseMessage();
             try
             {
-                return InitiatePayment(paymentDTO).Result;
+                //httpResponseMessage.Content
+                return InitiatePayment(paymentDTO);
             }
             catch (Exception ex)
             {
-                httpResponseMessage.StatusCode = HttpStatusCode.InternalServerError;
-                httpResponseMessage.Content = new StringContent(ex.Message);
-                return httpResponseMessage;
+                //httpResponseMessage.StatusCode = HttpStatusCode.InternalServerError;
+                //httpResponseMessage.Content = new StringContent(ex.Message);
+                return null;
             }
         }
 
@@ -40,7 +47,7 @@ namespace COM.Checkout.Payment.Api.Service.Impl
             HttpResponseMessage httpResponseMessage = new HttpResponseMessage();
             try
             {                
-                return GetPaymentDetails(paymentConfirmationDTO.TransactionConfirmationCode).Result;
+                return GetPaymentDetails(paymentConfirmationDTO);
             }
             catch (Exception ex)
             {
@@ -52,35 +59,41 @@ namespace COM.Checkout.Payment.Api.Service.Impl
 
         static HttpClient client = new HttpClient();
 
-        static async Task<HttpResponseMessage> InitiatePayment(PaymentRequestDTO paymentDTO)
+        public PaymentRequestDTO InitiatePayment(PaymentRequestDTO paymentDTO)
         {
-            PrepareClient();
+            //HttpResponseMessage response = await client.PostAsJsonAsync("BankPayment/Payment", paymentDTO);
 
-            HttpResponseMessage response = await client.PostAsJsonAsync("BankPayment/Payment", paymentDTO);
-            response.EnsureSuccessStatusCode();            
-            return response;
+            PaymentRequestDTO result = webApiHttpClient.RequestPost<PaymentRequestDTO, PaymentRequestDTO>("/BankPayment/Payment", paymentDTO); //Authentication not added due to time constraint
+
+            return result;
+
+            //response.EnsureSuccessStatusCode();            
+            //return response;
         }
 
-        static async Task<PaymentConfirmationRequestDTO> GetPaymentDetails(string TransactionConfirmationCode)
+        public PaymentConfirmationRequestDTO GetPaymentDetails(PaymentConfirmationRequestDTO paymentConfirmation)
         {
-            PaymentConfirmationRequestDTO paymentConf = null;
+            PaymentConfirmationRequestDTO paymentConf = webApiHttpClient.RequestPost<PaymentConfirmationRequestDTO, PaymentConfirmationRequestDTO>("/BankPayment/Confirm", paymentConfirmation); //Authentication not added due to time constraint
+            
+            //HttpResponseMessage response = await client.GetAsync($"BankPayment/Payment/{TransactionConfirmationCode}");
 
-            PrepareClient();
-            HttpResponseMessage response = await client.GetAsync($"BankPayment/Payment/{TransactionConfirmationCode}");
-
-            if (response.IsSuccessStatusCode)
-            {
-                paymentConf = await response.Content.ReadAsAsync<PaymentConfirmationRequestDTO>();
-            }
+            //if (response.IsSuccessStatusCode)
+            //{
+            //    paymentConf = await response.Content.ReadAsAsync<PaymentConfirmationRequestDTO>();
+            //}
             return paymentConf;
         }
 
-        static void PrepareClient()
+        private static WebApiHttpClient webApiHttpClient = null;
+
+        static PaymentServices()
         {
-            // Update port # in the following line.
-            client.BaseAddress = new Uri(Consts.BankURL);
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            if (webApiHttpClient == null)
+            {
+                webApiHttpClient = new WebApiHttpClient();
+                webApiHttpClient.BaseAddress = new Uri(Consts.BankURL);
+                webApiHttpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            }
         }
 
         #endregion

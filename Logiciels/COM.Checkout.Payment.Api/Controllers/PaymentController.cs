@@ -36,19 +36,20 @@ namespace COM.Checkout.Payment.Api.Controllers
         [HttpPost]
         [Route("OnlinePayment/Payment")]
         [ResponseType(typeof(PaymentRequestDTO))]
-        public HttpResponseMessage Payment([FromBody] PaymentRequestDTO req)
+        public IHttpActionResult Payment([FromBody] PaymentRequestDTO req)
         {
             HttpResponseMessage response = new HttpResponseMessage();
+            PaymentRequestDTO paymentRequest = null;
             try
             {
-                response = _paymentServices.DoPayment(req);
+                paymentRequest = _paymentServices.DoPayment(req);
             }
             catch (Exception ex)
             {
                 response.StatusCode = HttpStatusCode.InternalServerError;
                 response.Content = new StringContent(ex.Message);
             }
-            return response;
+            return Ok(paymentRequest);
         }
     
     /// <summary>
@@ -65,7 +66,7 @@ namespace COM.Checkout.Payment.Api.Controllers
 
             try
             {
-                paymentConfirmation = _paymentServices.GetPayment(req);
+                paymentConfirmation = _paymentServices.GetPaymentDetails(req);
             }
             catch (Exception ex)
             {

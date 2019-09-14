@@ -59,7 +59,7 @@ namespace COM.Bank.Api.Controllers
     /// <returns></returns>
     [HttpPost]
     [Route("BankPayment/Confirm")]
-    [ResponseType(typeof(PaymentRequestDTO))]
+    [ResponseType(typeof(PaymentConfirmationRequestDTO))]
     public IHttpActionResult Confirm([FromBody] PaymentConfirmationRequestDTO req)
     {
             PaymentConfirmationRequestDTO paymentConfirmation = new PaymentConfirmationRequestDTO();
