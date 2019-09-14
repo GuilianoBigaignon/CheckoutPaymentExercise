@@ -10,7 +10,13 @@ D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\Sy
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Http.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Http.Tracing.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Http.WebHost.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Mvc.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\TinyMapper.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Razor.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.WebPages.Razor.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.WebPages.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\Payment.Api.Contract.pdb
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\ICTER.ListeDV.Entity.pdb
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\log4net.xml
@@ -20,6 +26,12 @@ D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\Sy
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Http.xml
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Http.Tracing.xml
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Http.WebHost.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Mvc.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.Razor.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.WebPages.Razor.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.WebPages.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\Microsoft.Web.Infrastructure.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\fr\System.Web.Http.resources.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\bin\Debug\fr\System.Web.Http.WebHost.resources.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api.Service\obj\Debug\Payment.Api.Service.csprojResolveAssemblyReference.cache

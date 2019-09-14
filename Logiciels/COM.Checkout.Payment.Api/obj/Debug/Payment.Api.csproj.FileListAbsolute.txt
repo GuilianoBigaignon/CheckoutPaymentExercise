@@ -19,6 +19,11 @@ D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.Http.
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.Http.Tracing.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.Http.WebHost.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\WebActivatorEx.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.Mvc.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.Razor.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.WebPages.Razor.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.WebPages.dll
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.WebPages.Deployment.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\Payment.Api.Contract.pdb
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\ICTER.ListeDV.Api.Service.pdb
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\Autofac.xml
@@ -33,6 +38,11 @@ D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Net.Http.
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.Http.xml
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.Http.Tracing.xml
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.Http.WebHost.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.Mvc.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.Razor.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.WebPages.Razor.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.WebPages.xml
+D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\System.Web.WebPages.Deployment.xml
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\fr\System.Net.Http.Formatting.resources.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\fr\System.Web.Http.resources.dll
 D:\API\Checkout\Checkout\Logiciels\COM.Checkout.Payment.Api\bin\fr\System.Web.Http.WebHost.resources.dll
