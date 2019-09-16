@@ -33,9 +33,9 @@ namespace COM.Checkout.Payment.Api
             var builder = new ContainerBuilder();
 
             // Register db context factory
-            ConnectionStringSettings connSettings = ConfigurationManager.ConnectionStrings["DBServices"];
-            builder.RegisterInstance(DbContextFactoryBuilder.Build(connSettings)).As<IDbContextFactory>();
-            builder.RegisterInstance(DbContextFactoryBuilder.Build(connSettings).CreateContext()).As<IDbContext>();
+            //ConnectionStringSettings connSettings = ConfigurationManager.ConnectionStrings["DBServices"];
+            //builder.RegisterInstance(DbContextFactoryBuilder.Build(connSettings)).As<IDbContextFactory>();
+            //builder.RegisterInstance(DbContextFactoryBuilder.Build(connSettings).CreateContext()).As<IDbContext>();
 
             #region Setup a common pattern
 
@@ -79,9 +79,10 @@ namespace COM.Checkout.Payment.Api
             var builder = new ContainerBuilder();
 
             // Register db context factory
-            ConnectionStringSettings connSettings = ConfigurationManager.ConnectionStrings["DBServices"];
-            builder.RegisterInstance(DbContextFactoryBuilder.Build(connSettings)).As<IDbContextFactory>();
-            builder.RegisterInstance(testContext).As<IDbContext>();
+            //ConnectionStringSettings connSettings = ConfigurationManager.ConnectionStrings["DBServices"];
+            //builder.RegisterInstance(DbContextFactoryBuilder.Build(connSettings)).As<IDbContextFactory>();
+            //builder.RegisterInstance(testContext).As<IDbContext>();
+
             #region Setup a common pattern
 
             // Register all existing types
