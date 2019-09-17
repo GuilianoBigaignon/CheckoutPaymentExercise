@@ -68,18 +68,6 @@ namespace COM.Bank.Api.Controllers
             {
                 req.CardNumber = "***" + req.CardNumber.Substring(req.CardNumber.Length - 3); //Mask the creditcard numder and resend objet as IS since it is a mock                
                 paymentConfirmation = req;
-
-                //paymentConfirmation = new PaymentConfirmationRequestDTO()
-                //{
-                //    Amount = req.Amount,
-                //    AuthenticationToken = req.AuthenticationToken,
-                //     bearer = req.bearer
-
-
-                //};
-
-
-
             }
             catch (Exception ex)
             {

@@ -179,10 +179,7 @@ namespace COM.Bank.Api
 
             // Use the "InjectJavaScript" option to invoke one or more custom JavaScripts after the swagger-ui
             // has loaded. The file must be included in your project as an "Embedded Resource", and then the resource's
-            // "Logical Name" is passed to the method as shown above.
-            //
-            //c.InjectJavaScript(thisAssembly, "Swashbuckle.Dummy.SwaggerExtensions.testScript1.js");
-            //c.InjectJavaScript(thisAssembly, "ICTER.Online.Api.CustomContent.api-version.js");
+            // "Logical Name" is passed to the method as shown above.            
 
             // The swagger-ui renders boolean data types as a dropdown. By default, it provides "true" and "false"
             // strings as the possible choices. You can use this option to change these to something else,

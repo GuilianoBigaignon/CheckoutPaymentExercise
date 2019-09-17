@@ -166,10 +166,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractBaseICTERTest.cs">
+    <Compile Include="AbstractBaseTest.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="PostValidationCompostageTests.cs" />
+    <Compile Include="SampleTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

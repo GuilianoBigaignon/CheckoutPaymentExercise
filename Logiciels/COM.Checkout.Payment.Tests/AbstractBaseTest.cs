@@ -8,9 +8,9 @@ using System.IO;
 using System.Reflection;
 
 
-namespace ICTER.Online.Tests
+namespace Com.Checkout.Tests
 {
-    public abstract class AbstractBaseICTERTest
+    public abstract class AbstractBaseTest
     {
         #region Déclaration des variables 
 
@@ -46,7 +46,7 @@ namespace ICTER.Online.Tests
         /// <summary>
         /// Constructeur de base pour tous les tests
         /// </summary>
-        public AbstractBaseICTERTest()
+        public AbstractBaseTest()
         {
             if (_container == null) //Un container unique pour toute la durée de vie d'un test
             {
@@ -61,19 +61,12 @@ namespace ICTER.Online.Tests
                 // _conn = testContext; //Contexte unique pour toute la durée de vie d'un test
 
                 ConnectionStringSettings connSettings = ConfigurationManager.ConnectionStrings["DBServices"];
-                ConnectionStringSettings connSettingsICTER = ConfigurationManager.ConnectionStrings["DBServicesICTER"];
 
                 var factory = DbContextFactoryBuilderTesting.Build(connSettings);
-                var factoryICTER = DbContextFactoryBuilderTesting.Build(connSettingsICTER);
 
-                builder.RegisterInstance(factory).Named<IDbContextFactory>("MTCAB");
-                builder.RegisterInstance(factoryICTER).Named<IDbContextFactory>("ICTER");
+                builder.RegisterInstance(factory).Named<IDbContextFactory>("XXX");
 
                 _conn = factory.CreateContext();
-                _connICTER = factoryICTER.CreateContext();
-
-                //_connICTER = factoryICTER.CreateContext();
-                //builder.RegisterInstance(testContext).As<IDbContext>();
 
                 #region Enregistrements AutoFac
                 
@@ -91,29 +84,23 @@ namespace ICTER.Online.Tests
         /// Base Cleanup ==> Database init
         /// </summary>
         protected void ResetDatabase()
-        {
-            var resolverCache = _container.Resolve<ICacheServices>();
-            resolverCache.ClearCache();
-            AbandonDatabaseTransaction(_conn, _connICTER);
+        {            
+            AbandonDatabaseTransaction(_conn);
         }
 
         /// <summary>
         /// Rollback de toutes les données de la BDD
         /// </summary>
         /// <param name="conn"></param>
-        private void AbandonDatabaseTransaction(IDbContext conn, IDbContext connICTER)
+        private void AbandonDatabaseTransaction(IDbContext conn)
         {
             //RAZ de sequences BDD
             ResetSequences(conn);
-            ResetSequences(connICTER);
 
-            var contextFactory = (IDbContextFactoryTesting)_container.ResolveNamed<IDbContextFactory>("MTCAB");
-            var contextFactoryICTER = (IDbContextFactoryTesting)_container.ResolveNamed<IDbContextFactory>("ICTER");
+            var contextFactory = (IDbContextFactoryTesting)_container.ResolveNamed<IDbContextFactory>("XXX");
             contextFactory.CloseContextAfterTest();
-            contextFactoryICTER.CloseContextAfterTest();
 
             _conn = null;
-            _connICTER = null;
             _container = null;
         }
 
@@ -129,7 +116,6 @@ namespace ICTER.Online.Tests
         {
             CreateCommonData(conn);
             CreateAdmLibelleDataForJeuParametre();
-
         }
 
         /// <summary>
@@ -194,17 +180,12 @@ namespace ICTER.Online.Tests
         /// <param name="conn"></param>
         private void DeleteCommonData(IDbContext conn)
         {
-            conn.Execute(new SqlDeleteBuilder("ADM_SYSPARAM")
-                .Where("NOM_SECTION = :NOMSECTION AND NOM_PARAMETRE = :NOMPARAMETRE")
-                .ToSql(),
-                new { NOMSECTION = "LOGGER", NOMPARAMETRE = "DIR_LOG" });
+            //conn.Execute(new SqlDeleteBuilder("ADM_SYSPARAM")
+            //    .Where("NOM_SECTION = :NOMSECTION AND NOM_PARAMETRE = :NOMPARAMETRE")
+            //    .ToSql(),
+            //    new { NOMSECTION = "LOGGER", NOMPARAMETRE = "DIR_LOG" });
 
-            conn.Execute(new SqlDeleteBuilder("ADM_SYSPARAM")
-                .Where("NOM_SECTION = :NOMSECTION AND NOM_PARAMETRE = :NOMPARAMETRE")
-                .ToSql(),
-                new { NOMSECTION = "LOGGER", NOMPARAMETRE = "FILE_LOG" });
-
-            conn.Save();
+            //conn.Save();
         }
 
 
@@ -215,11 +196,11 @@ namespace ICTER.Online.Tests
         /// <param name="conn"></param>
         protected void DeleteAdmSysParamFtpRootForTest(IDbContext conn)
         {
-            conn.Execute(new SqlDeleteBuilder("ADM_SYSPARAM")
-                .Where("NOM_SECTION = :NOMSECTION AND NOM_PARAMETRE = :NOMPARAMETRE")
-                .ToSql(),
-                new { NOMSECTION = "ITF_EQUIPEMENT", NOMPARAMETRE = "FTP_PARAM_ROOT" });
-            conn.Save();
+            //conn.Execute(new SqlDeleteBuilder("ADM_SYSPARAM")
+            //    .Where("NOM_SECTION = :NOMSECTION AND NOM_PARAMETRE = :NOMPARAMETRE")
+            //    .ToSql(),
+            //    new { NOMSECTION = "ITF_EQUIPEMENT", NOMPARAMETRE = "FTP_PARAM_ROOT" });
+            //conn.Save();
         }
 
         /// <summary>
@@ -229,23 +210,7 @@ namespace ICTER.Online.Tests
         {
             this.InsertData("ADM_LIBELLE", _conn);
 
-        }
-        private void CreateAdmLibelleDataForJeuParametreICTER()
-        {
-            this.InsertData("ADM_LIBELLE", _connICTER);
-
-        }
-
-        /// <summary>
-        ///  Supprime tous les elements requis pour les jeux de paramètres dans ADM_LIBELLE
-        /// </summary>        
-        private void DeleteAdmLibelleDataForJeuParametre(IDbContext conn)
-        {
-            conn.Execute("delete FROM [dbo].[ADM_LIBELLE] WHERE NOM_SECTION IN ('TYPE_JEU_PARAMETRE', 'TYPE_PARAMETRE','ETAT_JEU_PARAM','RESTRICTION_JEU_PARAMETRE')");
-            conn.Save();
-        }
-
-
+        } 
 
         /// <summary>
         ///     Use for insert data from SQL files in DatabaseData\

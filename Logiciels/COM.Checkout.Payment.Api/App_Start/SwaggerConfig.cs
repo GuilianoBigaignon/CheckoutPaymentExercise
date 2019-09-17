@@ -46,13 +46,7 @@ namespace COM.Checkout.Payment.Api
                             // In this case, you must provide a lambda that tells Swashbuckle which actions should be
                             // included in the docs for a given API version. Like "SingleApiVersion", each call to "Version"
                             // returns an "Info" builder so you can provide additional metadata per API version.
-                            //
-                            //c.MultipleApiVersions(
-                            //    ResolveVersionSupportByRouteConstraint,
-                            //    (vc) =>
-                            //    {
-                            //      vc.Version("v1", "ICTER.Online.Api").Description("ESFP Phase 2 API to OpenMedia eTicket for Online Services");
-                            //    });
+                            //                            
 
                             // You can use "BasicAuth", "ApiKey" or "OAuth2" options to describe security schemes for the API.
                             // See https://github.com/swagger-api/swagger-spec/blob/master/versions/2.0.md for more details.
@@ -182,7 +176,6 @@ namespace COM.Checkout.Payment.Api
             // "Logical Name" is passed to the method as shown above.
             //
             //c.InjectJavaScript(thisAssembly, "Swashbuckle.Dummy.SwaggerExtensions.testScript1.js");
-            //c.InjectJavaScript(thisAssembly, "ICTER.Online.Api.CustomContent.api-version.js");
 
             // The swagger-ui renders boolean data types as a dropdown. By default, it provides "true" and "false"
             // strings as the possible choices. You can use this option to change these to something else,
